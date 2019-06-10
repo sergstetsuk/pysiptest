@@ -13,6 +13,7 @@ user defined script which provides rules for message flow. It uses helper
 functions to send messages. Each message may be preprocessed. The patterns are
 used as the basis for messages used by test scenarios
 
+```ditaa
 pysiptest.py ---> scenario.py ===> INVITE  --->
                     ^ ^ ^ ^        <---  TRYING
 		    | | | |        <--- RINGING
@@ -20,6 +21,15 @@ invite.pat ---------+ | | |        <---      OK
 ok.pat ---------------+ | |        ACK     --->
 ack.pat ----------------+ |        BYE     --->
 bye ------------------- --+        <---      OK
+```
+
+# scenario scripting
+
+# helper functions
 
 # usage
-```python pysiptest.py patterns.scenario```
+```
+python pysiptest.py patterns.scenario
+python pysiptest.py patterns.uac
+python pysiptest.py patterns.notify
+```
